@@ -1,0 +1,29 @@
+This Model sam_vit_b_01ec64.pth downloaded from SAM metaAi is compulsory to install, i deleted it because it require a huge memory which will go above the 200mb for memory
+
+
+# Core Libraries
+numpy             # Numerical operations
+matplotlib        # Plotting and visualization
+Pillow            # Image processing
+
+# Deep Learning
+torch             # Core PyTorch library
+torchvision       # Datasets, models, and image transformations for PyTorch
+
+# Computer Vision
+opencv-python     # OpenCV for image processing and computer vision tasks
+
+# Segmentation
+segment_anything  # Meta AI's Segment Anything model
+GIMP              # Photo editor and manipulation
+
+# Utility Libraries
+PyYAML            # YAML parsing for configuration files
+pyparsing         # Used for parsing expressions (matplotlib dependency)
+cycler            # Cycles through color/line styles in matplotlib
+
+# YOLO Object Detection
+ultralytics       # YOLOv8 for object detection and segmentation
+
+#ChatGpt
+ChatGpt  was very helpful during this project, especially with some of the Scripts to aid efficiency and for a beginner level programmer
