@@ -24,12 +24,16 @@ class VehicleSegmentationPipeline:
         self.vehicle_class_ids = set(vehicle_class_ids or cfg.vehicle_class_ids)
         self.model = YOLO(self.model_path)
 
-    def segment_and_count(self, image_rgb: np.ndarray) -> Dict[str, np.ndarray | int | List[Tuple[int, int, int, int]]]:
+    def segment_and_count(
+        self, image_rgb: np.ndarray
+    ) -> Dict[str, np.ndarray | int | List[Tuple[int, int, int, int]]]:
         """Run model inference, create visual overlays, and count vehicle instances."""
         if image_rgb is None or image_rgb.size == 0:
             raise ValueError("Input image is empty.")
 
-        results = self.model.predict(source=image_rgb, conf=self.confidence, verbose=False)
+        results = self.model.predict(
+            source=image_rgb, conf=self.confidence, verbose=False
+        )
         result = results[0]
 
         overlay = image_rgb.copy()
@@ -64,7 +68,9 @@ class VehicleSegmentationPipeline:
             if mask_data is not None and idx < len(mask_data):
                 mask = mask_data[idx] > 0
                 mask_layer[mask] = 255
-                overlay[mask] = (0.6 * overlay[mask] + 0.4 * np.array([0, 255, 0])).astype(np.uint8)
+                overlay[mask] = (
+                    0.6 * overlay[mask] + 0.4 * np.array([0, 255, 0])
+                ).astype(np.uint8)
 
             label = f"vehicle {confidences[idx]:.2f}"
             cv2.rectangle(overlay, (x1, y1), (x2, y2), (0, 255, 0), 2)
