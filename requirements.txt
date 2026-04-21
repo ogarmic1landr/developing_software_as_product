@@ -1,29 +1,171 @@
-This Model sam_vit_b_01ec64.pth downloaded from SAM metaAi is compulsory to install, i deleted it because it require a huge memory which will go above the 200mb for memory
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: osx-arm64
+# created-by: conda 26.1.0
+# Note: This is a conda requirements file (MatchSpec format)
+# Contains conda package specifications, not pip requirements
 
-
-# Core Libraries
-numpy             # Numerical operations
-matplotlib        # Plotting and visualization
-Pillow            # Image processing
-
-# Deep Learning
-torch             # Core PyTorch library
-torchvision       # Datasets, models, and image transformations for PyTorch
-
-# Computer Vision
-opencv-python     # OpenCV for image processing and computer vision tasks
-
-# Segmentation
-segment_anything  # Meta AI's Segment Anything model
-GIMP              # Photo editor and manipulation
-
-# Utility Libraries
-PyYAML            # YAML parsing for configuration files
-pyparsing         # Used for parsing expressions (matplotlib dependency)
-cycler            # Cycles through color/line styles in matplotlib
-
-# YOLO Object Detection
-ultralytics       # YOLOv8 for object detection and segmentation
-
-#ChatGpt
-ChatGpt  was very helpful during this project, especially with some of the Scripts to aid efficiency and for a beginner level programmer
+conda-forge::_python_abi3_support==1.0=hd8ed1ab_2
+pkgs/main::aom==3.12.1=ha237518_0
+conda-forge::appnope==0.1.4=pyhd8ed1ab_1
+conda-forge::asttokens==3.0.1=pyhd8ed1ab_0
+pkgs/main::aws-c-auth==0.9.4=haa24f5a_0
+pkgs/main::aws-c-cal==0.9.13=haa24f5a_0
+pkgs/main::aws-c-common==0.12.6=haa24f5a_0
+pkgs/main::aws-c-compression==0.3.1=haa24f5a_3
+pkgs/main::aws-c-http==0.10.7=haa24f5a_0
+pkgs/main::aws-c-io==0.23.3=haa24f5a_0
+pkgs/main::aws-c-s3==0.11.3=haa24f5a_0
+pkgs/main::aws-c-sdkutils==0.2.4=haa24f5a_2
+pkgs/main::aws-checksums==0.2.8=haa24f5a_0
+pkgs/main::blas==1.0=openblas
+pkgs/main::bzip2==1.0.8=h80987f9_6
+pkgs/main::c-ares==1.34.6=hfe05a68_0
+pkgs/main::ca-certificates==2026.3.19=hca03da5_0
+pkgs/main::cairo==1.18.4=h191e429_0
+conda-forge::comm==0.2.3=pyhe01879c_0
+pkgs/main::contourpy==1.3.3=py314h20e30b6_0
+conda-forge::cpython==3.14.4=py314hd8ed1ab_100
+pkgs/main::cycler==0.12.1=py314hca03da5_0
+pkgs/main::dav1d==1.2.1=h80987f9_0
+conda-forge::debugpy==1.8.20=py314he609de1_0
+conda-forge::decorator==5.2.1=pyhd8ed1ab_0
+conda-forge::executing==2.2.1=pyhd8ed1ab_0
+pkgs/main::expat==2.7.5=h50f4ffc_0
+pkgs/main::ffmpeg==8.0.1=h3893eba_2
+pkgs/main::fontconfig==2.15.0=h29935d0_0
+pkgs/main::fonttools==4.62.1=py314haa24f5a_0
+pkgs/main::freetype==2.14.1=h7cdc921_0
+pkgs/main::fribidi==1.0.16=h8859324_0
+pkgs/main::gdk-pixbuf==2.44.4=hf47f480_0
+pkgs/main::gettext==0.25.1=h50c8ec2_0
+pkgs/main::gettext-tools==0.25.1=h61de102_0
+pkgs/main::gflags==2.2.2=h313beb8_1
+pkgs/main::giflib==5.2.2=h80987f9_0
+pkgs/main::glib==2.86.3=h863a760_0
+pkgs/main::glib-tools==2.86.3=hff4a405_0
+pkgs/main::glog==0.5.0=h313beb8_1
+pkgs/main::glslang==15.3.0=hc0c9d07_1
+pkgs/main::graphite2==1.3.14=hc377ac9_1
+pkgs/main::gst-plugins-base==1.28.1=hd92a63e_0
+pkgs/main::gstreamer==1.28.1=h21464a9_0
+pkgs/main::gstreamer-orc==0.4.42=h666e35a_0
+pkgs/main::gtest==1.17.0=h8f38272_0
+pkgs/main::harfbuzz==12.3.0=h9837a22_1
+pkgs/main::hdf5==2.0.0=hb8a7d6e_1
+pkgs/main::icu==73.1=h313beb8_0
+conda-forge::ipykernel==7.2.0=pyh5552912_1
+conda-forge::ipython==9.12.0=pyhecfbec7_0
+conda-forge::ipython_pygments_lexers==1.1.1=pyhd8ed1ab_0
+pkgs/main::jansson==2.14=h80987f9_1
+conda-forge::jedi==0.19.2=pyhd8ed1ab_1
+pkgs/main::jpeg==9f=h2f69dba_0
+conda-forge::jupyter_client==8.8.0=pyhcf101f3_0
+conda-forge::jupyter_core==5.9.1=pyhc90fa1f_0
+pkgs/main::kiwisolver==1.4.9=py314haeee614_0
+conda-forge::krb5==1.22.2=h385eeb1_0
+pkgs/main::lame==3.100=h5f1bbbb_1
+pkgs/main::lcms2==2.17=h7418793_0
+pkgs/main::leptonica==1.82.0=hdedf53e_3
+pkgs/main::lerc==4.1.0=h50f4ffc_1
+pkgs/main::libabseil==20260107.0=cxx17_hdc7b58b_0
+pkgs/main::libarchive==3.8.2=ha845c4f_0
+pkgs/main::libasprintf==0.25.1=h7b764f5_0
+pkgs/main::libasprintf-devel==0.25.1=h7b764f5_0
+pkgs/main::libass==0.17.4=hcbf5c06_0
+pkgs/main::libavif==1.3.0=h839b4eb_0
+pkgs/main::libbrotlicommon==1.2.0=hbd7815e_0
+pkgs/main::libbrotlidec==1.2.0=h1e834b2_0
+pkgs/main::libbrotlienc==1.2.0=h5439a07_0
+pkgs/main::libcurl==8.19.0=hc5dca5f_0
+pkgs/main::libcxx==22.1.2=hf894667_0
+pkgs/main::libdeflate==1.22=h80987f9_0
+conda-forge::libedit==3.1.20250104=pl5321hafb1f1b_0
+pkgs/main::libev==4.33=h1a28f6b_1
+pkgs/main::libexpat==2.7.5=h50f4ffc_0
+pkgs/main::libffi==3.4.4=hca03da5_1
+pkgs/main::libgettextpo==0.25.1=h7b764f5_0
+pkgs/main::libgettextpo-devel==0.25.1=h7b764f5_0
+pkgs/main::libgfortran==15.2.0=h09d7db9_1
+pkgs/main::libgfortran5==15.2.0=hb654fa1_1
+pkgs/main::libglib==2.86.3=hcacd345_0
+pkgs/main::libiconv==1.18=h92f5915_0
+pkgs/main::libidn2==2.3.8=h9681e36_0
+pkgs/main::libintl==0.25.1=h7b764f5_0
+pkgs/main::libintl-devel==0.25.1=h7b764f5_0
+pkgs/main::libkrb5==1.22.1=ha46c28b_0
+pkgs/main::libmpdec==4.0.0=h80987f9_0
+pkgs/main::libnghttp2==1.67.1=h8189af8_0
+pkgs/main::libogg==1.3.5=h1a28f6b_1
+pkgs/main::libopenblas==0.3.31=h7813bb4_0
+pkgs/main::libopenjpeg==2.5.4=haa24f5a_1
+pkgs/main::libopus==1.6.1=hcaaa34f_0
+pkgs/main::libpng==1.6.56=hc9243e6_0
+pkgs/main::libprotobuf==6.33.5=h55f9a99_0
+pkgs/main::librsvg==2.60.2=h054393a_0
+conda-forge::libsodium==1.0.21=h1a92334_3
+pkgs/main::libssh2==1.11.1=h3e2b118_0
+pkgs/main::libtheora==1.2.0=h7de75a5_1
+pkgs/main::libtiff==4.7.1=h367c460_0
+pkgs/main::libunistring==1.3=h1799b2a_0
+pkgs/main::libvorbis==1.3.7=he508a53_1
+pkgs/main::libvpx==1.15.2=h6b4e6e5_0
+pkgs/main::libwebp==1.6.0=h30d73d9_0
+pkgs/main::libwebp-base==1.6.0=h92b2d59_0
+pkgs/main::libxcb==1.17.0=h3fc13f7_0
+pkgs/main::libxml2==2.13.9=h528a072_0
+pkgs/main::libzlib==1.3.1=h5f15de7_0
+pkgs/main::llvm-openmp==22.1.2=h4714345_0
+pkgs/main::lmdb==0.9.31=h79febb2_0
+pkgs/main::lz4-c==1.9.4=h313beb8_1
+pkgs/main::matplotlib==3.10.8=py314hca03da5_0
+pkgs/main::matplotlib-base==3.10.8=py314haeb1505_0
+conda-forge::matplotlib-inline==0.2.1=pyhd8ed1ab_0
+pkgs/main::ncurses==6.5=hee39554_0
+conda-forge::nest-asyncio==1.6.0=pyhd8ed1ab_1
+pkgs/main::numpy==2.4.4=py314hde9b8b7_0
+pkgs/main::numpy-base==2.4.4=py314hb4b2851_0
+pkgs/main::opencv==4.13.0=headless_py314h1633439_5
+pkgs/main::openh264==2.6.0=hc17ed81_1
+pkgs/main::openjpeg==2.5.4=h959fc53_1
+conda-forge::openssl==3.6.2=hd24854e_0
+pkgs/main::packaging==26.0=py314hca03da5_0
+pkgs/main::pango==1.56.4=he757357_0
+conda-forge::parso==0.8.6=pyhcf101f3_0
+pkgs/main::pcre2==10.46=h1dacb4a_0
+conda-forge::pexpect==4.9.0=pyhd8ed1ab_1
+pkgs/main::pillow==12.1.1=py314h702022c_0
+pkgs/main::pip==26.0.1=pyh0d26453_1
+pkgs/main::pixman==0.46.4=h09dc60e_0
+conda-forge::platformdirs==4.9.4=pyhcf101f3_0
+conda-forge::prompt-toolkit==3.0.52=pyha770c72_0
+conda-forge::psutil==7.2.2=py314ha14b1ff_0
+pkgs/main::pthread-stubs==0.3=h1a28f6b_1
+conda-forge::ptyprocess==0.7.0=pyhd8ed1ab_1
+conda-forge::pure_eval==0.2.3=pyhd8ed1ab_1
+conda-forge::pygments==2.20.0=pyhd8ed1ab_0
+pkgs/main::pyparsing==3.2.5=py314hca03da5_0
+pkgs/main::python==3.14.3=h748c21b_101_cp314
+pkgs/main::python-dateutil==2.9.0post0=py314hca03da5_2
+conda-forge::python-gil==3.14.4=h4df99d1_100
+pkgs/main::python_abi==3.14=2_cp314
+conda-forge::pyzmq==27.1.0=py312h022ad19_2
+pkgs/main::readline==8.3=h0b18652_0
+pkgs/main::shaderc==2025.5=h34c1e8d_1
+pkgs/main::six==1.17.0=py314hca03da5_0
+pkgs/main::spirv-tools==2026.1=haeee614_0
+pkgs/main::sqlite==3.51.2=h67002bf_0
+conda-forge::stack_data==0.6.3=pyhd8ed1ab_1
+pkgs/main::svt-av1==3.1.2=h50f4ffc_0
+pkgs/main::tesseract==5.2.0=h9e66425_3
+pkgs/main::tk==8.6.15=hcd8a7d5_0
+pkgs/main::tornado==6.5.5=py314haa24f5a_0
+conda-forge::traitlets==5.14.3=pyhd8ed1ab_1
+pkgs/main::tzdata==2026a=he532380_0
+conda-forge::wcwidth==0.6.0=pyhd8ed1ab_0
+pkgs/main::xorg-libxau==1.0.12=h3fc13f7_0
+pkgs/main::xorg-libxdmcp==1.1.5=h3fc13f7_0
+pkgs/main::xz==5.8.2=h8bbcb1d_0
+conda-forge::zeromq==4.3.5=h4818236_10
+pkgs/main::zlib==1.3.1=h5f15de7_0
+pkgs/main::zstd==1.5.7=h817c040_0

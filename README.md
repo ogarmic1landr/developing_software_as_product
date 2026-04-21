@@ -43,6 +43,32 @@ Structure the project for collaborative development using GitHub
 Apply best practices in software product engineering  
 
 
+## Optional UI Demo (Paste Screenshot -> Segment + Count)
+This repository now includes a lightweight Streamlit UI for quick testing on screenshots
+(including Google Maps screenshots pasted into the uploader).
+
+### What it does
+- Loads an uploaded or pasted image
+- Runs YOLOv8 segmentation/detection
+- Highlights detected vehicle regions
+- Counts vehicles (car, bus, truck classes)
+
+### Run
+1. Install required runtime packages (if missing in your environment):
+	- `pip install -r requirements-ui.txt`
+2. Start the app from project root:
+	- `streamlit run app.py`
+3. In the browser UI, paste or upload a screenshot and click **Run segmentation**.
+
+
+## Planned Refactor Tracking
+Use the issue roadmap in:
+- `GITHUB_ISSUES_ROADMAP.md`
+
+It provides a chronological GitHub issue sequence to refactor the notebook into a modular,
+clean, and maintainable software product.
+
+
 
 ## Technologies and Tools
 Python 
