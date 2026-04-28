@@ -21,7 +21,7 @@ Julija Pecerska
 
 
 ## Date
-March 2026
+May 2026
 
 
 ## Project Aim
@@ -30,17 +30,17 @@ This transformation involves code refactoring, modularization, improved document
 
 
 ## Project Objectives
-Refactor and modularize the existing code
+- Refactor and modularize the existing code
 
-Improve runtime performance and scalability
+- Improve runtime performance and scalability
 
-Enhance documentation and code readability
+- Enhance documentation and code readability
 
-Improve maintainability through clearer structure and naming conventions
+- Improve maintainability through clearer structure and naming conventions
 
-Structure the project for collaborative development using GitHub
+- Structure the project for collaborative development using GitHub
 
-Apply best practices in software product engineering  
+- Apply best practices in software product engineering  
 
 
 ## Optional UI Demo (Paste Screenshot -> Segment + Count)
@@ -71,19 +71,21 @@ clean, and maintainable software product.
 
 
 ## Technologies and Tools
-Python 
+- Python 
 
-Jupyter Notebook
+- Jupyter Notebook
 
-OpenCV
+- OpenCV
 
-Numpy
+- Numpy
 
-Matplotlib
+- Matplotlib
 
-Meta segment anything
+- Meta segment anything
 
-Git and GitHub
+- YOLOv8m segmentation model
+
+- Git and GitHub
 
 
 ## Collaboration Workflow
@@ -91,20 +93,43 @@ All changes must be made in feature branches
 
 Pull Requests are required before merging
 
-Minimum of 2 approvals from collaborators required
+Minimum of 1 approvals from collaborators required
+
+
+## Current codebase
+This project was initially a Jupyter notebook for vehicle image segmentation. The notebook contains all core logic within a single file, including data loading, Image preprocessing steps, Testing several Image segmentation models, and visualization.
+
+While suitable for experimentation, the monolithic structure limits reusability, scalability, and maintainability. To address this, the project is being refactored into a modular Python based codebase.
+
+The screenshot below illustrates an example of the original implementation, where image loading is performed using hardcoded (image_folder = "images") file paths within the notebook.
+
+
+![Initial notebook structure](assets/screenshots/Screenshot%20(1192).png)
+
+
+## Refactoring Plan
+
+To improve the structure of the project, the notebook will be decomposed into modular Python components:
+
+- Image data loading module → Handles image paths and loading
+- Image Preprocessing module → Handles image resizing, gray-scaling, and other transformations
+- Segmentation module → Runs YOLO/SAM models
+- Visualization module → Handles plotting and output display
+
+These modules will be saved as separate .py files, allowing them to be imported into other scripts or components of the project. This enables code reuse across the pipeline and supports a more scalable and maintainable software design.
 
 
 ## Current Limitations of the Original Notebook
 
 The original vehicle segmentation project was developed as a research-oriented Jupyter notebook. 
 
-While functional, it has several limitations when viewed as a software product this include;
+While functional, it has several limitations when viewed as a software product this include:
 
-Monolithic notebook structure with no clear modular separation  
-Limited reusability and scalability  
-Hard coded parameters and file paths  
-Minimal documentation  
-Designed for experimentation rather than maintainable software development  
+- Monolithic notebook structure with no clear modular separation  
+- Limited reusability and scalability  
+- Hard coded parameters and file paths  
+- Minimal documentation  
+- Designed for experimentation rather than maintainable software development  
 
 
 
