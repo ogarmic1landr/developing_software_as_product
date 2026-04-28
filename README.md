@@ -96,11 +96,34 @@ Pull Requests are required before merging
 Minimum of 1 approvals from collaborators required
 
 
+## Current codebase
+This project was initially a Jupyter notebook for vehicle image segmentation. The notebook contains all core logic within a single file, including data loading, Image preprocessing steps, Testing several Image segmentation models, and visualization.
+
+While suitable for experimentation, the monolithic structure limits reusability, scalability, and maintainability. To address this, the project is being refactored into a modular Python based codebase.
+
+The screenshot below illustrates an example of the original implementation, where image loading is performed using hardcoded (image_folder = "images") file paths within the notebook.
+
+
+![Initial notebook structure](assets/screenshots/Screenshot%20(1192).png)
+
+
+## Refactoring Plan
+
+To improve the structure of the project, the notebook will be decomposed into modular Python components:
+
+- Image data loading module → Handles image paths and loading
+- Image Preprocessing module → Handles image resizing, gray-scaling, and other transformations
+- Segmentation module → Runs YOLO/SAM models
+- Visualization module → Handles plotting and output display
+
+These modules will be saved as separate .py files, allowing them to be imported into other scripts or components of the project. This enables code reuse across the pipeline and supports a more scalable and maintainable software design.
+
+
 ## Current Limitations of the Original Notebook
 
 The original vehicle segmentation project was developed as a research-oriented Jupyter notebook. 
 
-While functional, it has several limitations when viewed as a software product this include;
+While functional, it has several limitations when viewed as a software product this include:
 
 - Monolithic notebook structure with no clear modular separation  
 - Limited reusability and scalability  
