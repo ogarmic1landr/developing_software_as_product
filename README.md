@@ -131,6 +131,9 @@ While functional, it has several limitations when viewed as a software product t
 - Minimal documentation  
 - Designed for experimentation rather than maintainable software development  
 
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
 
 
                                                     
