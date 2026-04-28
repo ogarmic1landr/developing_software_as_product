@@ -21,7 +21,7 @@ Julija Pecerska
 
 
 ## Date
-March 2026
+May 2026
 
 
 ## Project Aim
@@ -30,17 +30,17 @@ This transformation involves code refactoring, modularization, improved document
 
 
 ## Project Objectives
-Refactor and modularize the existing code
+- Refactor and modularize the existing code
 
-Improve runtime performance and scalability
+- Improve runtime performance and scalability
 
-Enhance documentation and code readability
+- Enhance documentation and code readability
 
-Improve maintainability through clearer structure and naming conventions
+- Improve maintainability through clearer structure and naming conventions
 
-Structure the project for collaborative development using GitHub
+- Structure the project for collaborative development using GitHub
 
-Apply best practices in software product engineering  
+- Apply best practices in software product engineering  
 
 
 ## Optional UI Demo (Paste Screenshot -> Segment + Count)
@@ -71,19 +71,21 @@ clean, and maintainable software product.
 
 
 ## Technologies and Tools
-Python 
+- Python 
 
-Jupyter Notebook
+- Jupyter Notebook
 
-OpenCV
+- OpenCV
 
-Numpy
+- Numpy
 
-Matplotlib
+- Matplotlib
 
-Meta segment anything
+- Meta segment anything
 
-Git and GitHub
+- YOLOv8m segmentation model
+
+- Git and GitHub
 
 
 ## Collaboration Workflow
@@ -91,7 +93,7 @@ All changes must be made in feature branches
 
 Pull Requests are required before merging
 
-Minimum of 2 approvals from collaborators required
+Minimum of 1 approvals from collaborators required
 
 
 ## Current Limitations of the Original Notebook
@@ -100,11 +102,11 @@ The original vehicle segmentation project was developed as a research-oriented J
 
 While functional, it has several limitations when viewed as a software product this include;
 
-Monolithic notebook structure with no clear modular separation  
-Limited reusability and scalability  
-Hard coded parameters and file paths  
-Minimal documentation  
-Designed for experimentation rather than maintainable software development  
+- Monolithic notebook structure with no clear modular separation  
+- Limited reusability and scalability  
+- Hard coded parameters and file paths  
+- Minimal documentation  
+- Designed for experimentation rather than maintainable software development  
 
 
 
