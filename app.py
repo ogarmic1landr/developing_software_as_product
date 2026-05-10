@@ -8,7 +8,6 @@ from PIL import Image
 
 from src.segmentation_project import VehicleSegmentationPipeline
 
-
 st.set_page_config(page_title="Vehicle Segmentation UI", layout="wide")
 
 st.title("Vehicle Segmentation and Counting")

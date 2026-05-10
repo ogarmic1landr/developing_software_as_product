@@ -1,4 +1,4 @@
-# Developing Software as a Product  (V5_15) 
+# Developing Software as a Product  (V5_15)
 
 
 ## Project Title
@@ -6,8 +6,8 @@ Collaborative Refactoring of a Vehicle Segmentation Project from Notebook to Sof
 
 
 ## Collaborators
-**Simon Schmid**, 
-**Alex Filo**  and 
+**Simon Schmid**,
+**Alex Filo**  and
 **Michael Ogar**
 
 
@@ -40,7 +40,7 @@ This transformation involves code refactoring, modularization, improved document
 
 - Structure the project for collaborative development using GitHub
 
-- Apply best practices in software product engineering  
+- Apply best practices in software product engineering
 
 
 ## Optional UI Demo (Paste Screenshot -> Segment + Count)
@@ -71,7 +71,7 @@ clean, and maintainable software product.
 
 
 ## Technologies and Tools
-- Python 
+- Python
 
 - Jupyter Notebook
 
@@ -121,26 +121,15 @@ These modules will be saved as separate .py files, allowing them to be imported 
 
 ## Current Limitations of the Original Notebook
 
-The original vehicle segmentation project was developed as a research-oriented Jupyter notebook. 
+The original vehicle segmentation project was developed as a research-oriented Jupyter notebook.
 
 While functional, it has several limitations when viewed as a software product this include:
 
-- Monolithic notebook structure with no clear modular separation  
-- Limited reusability and scalability  
-- Hard coded parameters and file paths  
-- Minimal documentation  
-- Designed for experimentation rather than maintainable software development  
+- Monolithic notebook structure with no clear modular separation
+- Limited reusability and scalability
+- Hard coded parameters and file paths
+- Minimal documentation
+- Designed for experimentation rather than maintainable software development
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
-
-
-
-                                                    
-                                                    
-                                                    
-                                                    
-                                                 
-                               
-
-                                                
