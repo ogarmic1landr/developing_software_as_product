@@ -13,6 +13,6 @@ dependencies:
       - torchvision>=0.16,<1
       - opencv-python
       - ultralytics>=8.0,<9
-      - segment-anything  
+      - segment-anything
       - streamlit
       - pyyaml

@@ -1,1 +1,1 @@
-from .loader import ImageLoader
+from .loader import ImageLoader as ImageLoader
