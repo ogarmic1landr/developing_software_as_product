@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+src/segmentation_project/__init__.py
+src/segmentation_project/config.py
+src/segmentation_project/vehicle_pipeline.py
+src/segmentation_project/data/__init__.py
+src/segmentation_project/data/loader.py
+src/segmentation_project/preprocessing/__init__.py
+src/segmentation_project/preprocessing/preprocessing.py
+src/segmentation_project/segmentation_models/__init__.py
+src/segmentation_project/segmentation_models/sam_segmenter.py
+src/segmentation_project/segmentation_models/yolo_segmenter.py
+src/vehicle_segmentation.egg-info/PKG-INFO
+src/vehicle_segmentation.egg-info/SOURCES.txt
+src/vehicle_segmentation.egg-info/dependency_links.txt
+src/vehicle_segmentation.egg-info/top_level.txt
