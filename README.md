@@ -104,6 +104,9 @@ The Conda environment configuration file can be found here:
 * `environment.yml`
   https://github.com/ogarmic1landr/developing_software_as_product/blob/main/environment.yml
 
+  The Python environment can also be set up using
+* `requirements.txt`
+  https://github.com/ogarmic1landr/developing_software_as_product/blob/main/requirements.txt
 ---
 
 ### Option 1: Using Conda (Recommended)
@@ -121,14 +124,14 @@ Install either:
 
 From the project root directory, run:
 
-*conda env create -f environment.yml*
+`conda env create -f environment.yml`
 
 on your terminal. This will create a new Conda environment named `dsp-vehicle-segmentation` with all required dependencies installed.
 
 
 #### Step 3 — Activate the environment
 
-*conda activate dsp-vehicle-segmentation*
+`conda activate dsp-vehicle-segmentation`
 
 Once activated, all required project dependencies will be available.
 
