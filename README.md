@@ -87,6 +87,14 @@ clean, and maintainable software product.
 - Git and GitHub
 
 
+## Recommended Development Environment
+
+The project has been tested and developed using the following IDEs:
+
+- Visual Studio Code (VS Code)
+- PyCharm
+
+
 ## Environment Setup
 
 This project supports both Conda-based environments and standard Python virtual environments.
@@ -178,6 +186,11 @@ streamlit run app.py
 ```
 
 The application will open in your default browser and allow image upload and vehicle segmentation testing.
+
+
+## Debugging and Running the Project
+
+The project can also be executed and debugged directly from the IDE using the configured Python interpreter or Conda environment.
 
 
 ## Collaboration Workflow
