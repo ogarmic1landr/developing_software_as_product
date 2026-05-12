@@ -150,7 +150,7 @@ This creates an isolated Python environment for the project.
 Windows:
 
 ```bash
-venv\Scripts\activate	
+venv\Scripts\activate
 ```
 Mac/Linux:
 
@@ -174,7 +174,7 @@ This installs all runtime dependencies required for the project.
 After the environment has been activated and dependencies installed, run the Streamlit application from the project root:
 
 ```bash
-streamlit run app.py	
+streamlit run app.py
 ```
 
 The application will open in your default browser and allow image upload and vehicle segmentation testing.
