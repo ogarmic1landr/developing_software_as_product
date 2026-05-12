@@ -69,7 +69,6 @@ It provides a chronological GitHub issue sequence to refactor the notebook into 
 clean, and maintainable software product.
 
 
-
 ## Technologies and Tools
 - Python
 
@@ -86,6 +85,99 @@ clean, and maintainable software product.
 - YOLOv8m segmentation model
 
 - Git and GitHub
+
+
+## Environment Setup
+
+This project supports both Conda-based environments and standard Python virtual environments.
+
+The Conda environment configuration file can be found here:
+
+* `environment.yml`
+  https://github.com/ogarmic1landr/developing_software_as_product/blob/main/environment.yml
+
+---
+
+### Option 1: Using Conda (Recommended)
+
+This option is recommended for contributors working with machine learning or scientific Python environments, as it ensures package compatibility and reproducibility across systems.
+
+#### Step 1 — Install Conda
+
+Install either:
+
+* Miniconda
+* or Anaconda
+
+#### Step 2 — Create the environment
+
+From the project root directory, run:
+
+*conda env create -f environment.yml*
+
+on your terminal. This will create a new Conda environment named `dsp-vehicle-segmentation` with all required dependencies installed.
+
+
+#### Step 3 — Activate the environment
+
+*conda activate dsp-vehicle-segmentation*
+
+Once activated, all required project dependencies will be available.
+
+---
+
+### Option 2: Using Standard Python (venv)
+
+This option is suitable for contributors who do not use Conda and only have Python installed.
+
+#### Step 1 — Create a virtual environment
+
+Windows:
+
+```bash
+python -m venv venv
+```
+
+Mac/Linux:
+
+```bash
+python3 -m venv venv
+```
+This creates an isolated Python environment for the project.
+
+#### Step 2 — Activate the virtual environment
+
+Windows:
+
+```bash
+venv\Scripts\activate	
+```
+Mac/Linux:
+
+```bash
+source venv/bin/activate
+```
+After activation, your terminal should display the virtual environment name.
+
+#### Step 3 — Install required dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+This installs all runtime dependencies required for the project.
+
+---
+
+## Running the Application
+
+After the environment has been activated and dependencies installed, run the Streamlit application from the project root:
+
+```bash
+streamlit run app.py	
+```
+
+The application will open in your default browser and allow image upload and vehicle segmentation testing.
 
 
 ## Collaboration Workflow
