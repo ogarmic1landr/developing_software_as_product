@@ -16,3 +16,4 @@ dependencies:
       - segment-anything
       - streamlit
       - pyyaml
+      - -e .
