@@ -1,7 +1,0 @@
-Metadata-Version: 2.4
-Name: vehicle-segmentation
-Version: 0.1.0
-Summary: Vehicle segmentation pipeline refactored from notebook to product
-Requires-Python: >=3.10
-License-File: LICENSE
-Dynamic: license-file

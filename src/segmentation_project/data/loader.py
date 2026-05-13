@@ -5,25 +5,47 @@ import numpy as np
 
 
 class ImageLoader:
+    def __init__(
+        self,
+        image_folder: str = "images",
+        marker: str = "pyproject.toml",
+    ):
+        self.project_root = self.find_project_root(marker)
+        self.image_dir = self.project_root / image_folder
+
     @staticmethod
+    def find_project_root(marker="pyproject.toml") -> Path:
+        """
+        Find project root by locating pyproject.toml.
+        """
+
+        path = Path.cwd()
+
+        while path != path.parent:
+            if (path / marker).exists():
+                return path
+
+            path = path.parent
+
+        raise FileNotFoundError(f"Project root not found (missing {marker})")
+
     def list_images(
-        folder: str | Path, ext: tuple = (".jpg", ".png", ".jpeg", ".tif")
+        self,
+        ext: tuple = (".jpg", ".png", ".jpeg", ".tif"),
     ) -> list[Path]:
         """
-        List image files from a directory.
+        List image files from the configured image directory.
         """
 
-        folder_path = Path(folder)
-
-        if not folder_path.is_dir():
-            raise FileNotFoundError(f"Directory does not exist or is invalid: {folder_path}")
+        if not self.image_dir.is_dir():
+            raise FileNotFoundError(f"Directory does not exist: {self.image_dir}")
 
         image_files = sorted(
-            [f for f in folder_path.iterdir() if f.is_file() and f.suffix.lower() in ext]
+            [f for f in self.image_dir.iterdir() if f.is_file() and f.suffix.lower() in ext]
         )
 
         if not image_files:
-            raise ValueError(f"No image files found in {folder_path}")
+            raise ValueError(f"No image files found in {self.image_dir}")
 
         return image_files
 
