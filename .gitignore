@@ -10,3 +10,4 @@ runs/
 /py_tut.md
 *.egg-info/
 *.pt
+*_output.png
