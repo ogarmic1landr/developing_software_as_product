@@ -11,3 +11,4 @@ runs/
 *.egg-info/
 *.pt
 *_output.png
+.DS_Store
