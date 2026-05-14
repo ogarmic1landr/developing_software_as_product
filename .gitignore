@@ -9,3 +9,4 @@ runs/
 /CLAUDE.md
 /py_tut.md
 *.egg-info/
+*.pt
