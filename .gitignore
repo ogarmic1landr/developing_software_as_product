@@ -12,3 +12,4 @@ runs/
 *.pt
 *_output.png
 .DS_Store
+*.pth
