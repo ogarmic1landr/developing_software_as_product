@@ -1,10 +1,15 @@
 import cv2
 import numpy as np
 
+TARGET_SIZE = (1910, 1070)
+
 
 class Resize:
     @staticmethod
-    def apply(image: np.ndarray, size: tuple = (512, 512)) -> np.ndarray:
+    def apply(
+        image: np.ndarray,
+        size: tuple = TARGET_SIZE,
+    ) -> np.ndarray:
         """
         Resize image to target size.
         """
@@ -14,12 +19,18 @@ class Resize:
 
 class RGBConverter:
     @staticmethod
-    def bgr_to_rgb(image: np.ndarray) -> np.ndarray:
+    def apply(
+        image: np.ndarray,
+    ) -> np.ndarray:
         """
         Convert BGR image to RGB.
         """
 
-        rgb_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        rgb_image = cv2.cvtColor(
+            image,
+            cv2.COLOR_BGR2RGB,
+        )
+
         return rgb_image
 
 

@@ -8,10 +8,12 @@ class ImageLoader:
     def __init__(
         self,
         image_folder: str = "images",
+        mask_folder: str = "masks_manual",
         marker: str = "pyproject.toml",
     ):
         self.project_root = self.find_project_root(marker)
         self.image_dir = self.project_root / image_folder
+        self.mask_dir = self.project_root / mask_folder
 
     @staticmethod
     def find_project_root(marker="pyproject.toml") -> Path:
@@ -49,6 +51,29 @@ class ImageLoader:
 
         return image_files
 
+    def get_mask_path(
+        self,
+        image_path: str | Path,
+        ext: tuple = (".jpg", ".png", ".jpeg", ".tif"),
+    ) -> Path:
+        """
+        Match image filename to corresponding manual mask.
+        """
+
+        image_path = Path(image_path)
+
+        image_stem = image_path.stem
+
+        for extension in ext:
+            mask_name = f"{image_stem}_mask_final{extension}"
+
+            mask_path = self.mask_dir / mask_name
+
+            if mask_path.exists():
+                return mask_path
+
+        raise FileNotFoundError(f"No matching mask found for: {image_stem}")
+
     @staticmethod
     def load_image(path: str | Path) -> np.ndarray:
         """
@@ -63,3 +88,18 @@ class ImageLoader:
             raise FileNotFoundError(f"Failed to load image: {path}")
 
         return image
+
+    @staticmethod
+    def load_mask(path: str | Path) -> np.ndarray:
+        """
+        Load manual mask as grayscale image.
+        """
+
+        path = Path(path)
+
+        mask = cv2.imread(str(path), cv2.IMREAD_GRAYSCALE)
+
+        if mask is None:
+            raise FileNotFoundError(f"Failed to load mask: {path}")
+
+        return mask
