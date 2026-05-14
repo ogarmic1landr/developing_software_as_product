@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 
+
 class BinarizeMask:
     @staticmethod
     def apply(
@@ -21,7 +22,6 @@ class BinarizeMask:
         return binary_mask
 
 
-
 class Overlay:
     @staticmethod
     def apply(
@@ -33,10 +33,7 @@ class Overlay:
         """
 
         if grayscale_image.shape != binary_mask.shape:
-            raise ValueError(
-                "Grayscale image and binary mask "
-                "must have the same dimensions."
-            )
+            raise ValueError("Grayscale image and binary mask " "must have the same dimensions.")
 
         overlay = grayscale_image.copy()
 
