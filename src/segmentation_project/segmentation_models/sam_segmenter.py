@@ -24,7 +24,8 @@ class SAMSegmenter:
         Download SAM checkpoint if it does not exist.
         """
 
-        checkpoint_path = Path(checkpoint_path)
+        module_dir = Path(__file__).parent
+        checkpoint_path = module_dir / checkpoint_path
 
         if not checkpoint_path.exists():
             print(f"Downloading SAM checkpoint " f"to {checkpoint_path}...")
