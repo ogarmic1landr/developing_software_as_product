@@ -242,6 +242,7 @@ The repository is organized into reusable components for:
 The current project structure is shown below:
 
 
+```text
 developing_software_as_product/
 │
 ├── assets/
@@ -291,6 +292,7 @@ developing_software_as_product/
 ├── README.md
 ├── LICENSE
 └── GITHUB_ISSUES_ROADMAP.md
+```
 
 
 
