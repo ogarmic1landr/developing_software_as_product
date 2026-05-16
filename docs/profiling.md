@@ -31,6 +31,22 @@ This prints the table to stdout and saves the raw profile data to
 
 **Total runtime: 0.535 seconds** on a typical input image.
 
+### Flamegraph
+
+For an interactive visualization of the call tree, see
+`docs/profiling_flamegraph.png` (generated with `snakeviz`):
+
+The wider a block, the more cumulative time spent in that function. The
+diagram makes the dominance of `ultralytics.predict` → PyTorch forward pass
+visually obvious — our own pipeline code is barely visible.
+
+To regenerate interactively:
+
+```bash
+pip install snakeviz
+snakeviz profile_output.prof
+```
+
 ### Time distribution
 
 | Phase | Time | % of total | Description |
