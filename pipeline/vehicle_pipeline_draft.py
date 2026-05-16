@@ -6,7 +6,7 @@ import cv2
 import numpy as np
 from ultralytics import YOLO
 
-from .config import PipelineConfig
+from .config_draft import PipelineConfig
 
 
 class VehicleSegmentationPipeline:

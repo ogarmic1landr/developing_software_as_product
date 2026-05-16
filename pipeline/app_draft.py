@@ -6,7 +6,7 @@ import numpy as np
 import streamlit as st
 from PIL import Image
 
-from src.segmentation_project import VehicleSegmentationPipeline
+from pipeline import VehicleSegmentationPipeline
 
 st.set_page_config(page_title="Vehicle Segmentation UI", layout="wide")
 
