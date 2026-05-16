@@ -254,6 +254,9 @@ developing_software_as_product/
 │
 ├── masks_manual/
 │
+├── pipeline/
+│       └── app.py/
+│
 ├── runs/
 │
 ├── src/
@@ -285,7 +288,6 @@ developing_software_as_product/
 │
 ├── .gitignore
 ├── .pre-commit-config.yaml
-├── app.py
 ├── environment.yml
 ├── requirements.txt
 ├── pyproject.toml
