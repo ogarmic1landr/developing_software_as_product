@@ -22,3 +22,6 @@ quote-style = "double"
 [tool.black]
 line-length = 100
 target-version = ["py310"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

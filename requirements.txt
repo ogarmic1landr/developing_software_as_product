@@ -12,4 +12,5 @@ streamlit
 PyYAML
 jupyter
 ipykernel
+pytest
 -e .
