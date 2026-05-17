@@ -1,5 +1,15 @@
 # Developing Software as a Product  (V5_15)
 
+![CI](https://github.com/ogarmic1landr/developing_software_as_product/actions/workflows/ci.yml/badge.svg)
+![Release](https://github.com/ogarmic1landr/developing_software_as_product/actions/workflows/release.yml/badge.svg)
+![Version](https://img.shields.io/badge/version-0.1.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![Status](https://img.shields.io/badge/status-active-success)
+![Architecture](https://img.shields.io/badge/architecture-modularized-purple)
+![Models](https://img.shields.io/badge/models-SAM%20%7C%20YOLOv8-orange)
+![Framework](https://img.shields.io/badge/UI-Streamlit-red)
+
 
 ## Project Title
 Collaborative Refactoring of a Vehicle Segmentation Project from Notebook to Software Product
