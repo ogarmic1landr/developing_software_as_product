@@ -13,3 +13,4 @@ runs/
 *_output.png
 .DS_Store
 *.pth
+*.profgi
