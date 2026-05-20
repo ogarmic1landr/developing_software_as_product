@@ -10,7 +10,7 @@ modular, and maintainable software product.
 - Tasks:
   - Create `src/segmentation_project/`.
   - Add `__init__.py` and base module files.
-  - Add clear folder conventions for `images`, `masks_manual`, `masks_auto`, `runs`.
+  - Add clear folder conventions for `images`, `masks_manual`, `masks_auto`.
 - Acceptance criteria:
   - Package imports work from notebook and scripts.
   - No hardcoded absolute machine paths in modules.
@@ -35,7 +35,7 @@ modular, and maintainable software product.
 ### Issue 4: Extract preprocessing module
 - Goal: Make preprocessing explicit, testable, and reusable.
 - Tasks:
-  - Add `preprocessing.py` with resize, grayscale, unsharp masking, CLAHE.
+  - Add `preprocessing.py` with resize, grayscale, sharpen, CLAHE.
   - Add single-image and batch preprocess functions.
 - Acceptance criteria:
   - Preprocessing steps are callable with one function per step.
@@ -43,15 +43,14 @@ modular, and maintainable software product.
 ### Issue 5: Add manual mask validation module
 - Goal: Standardize validation against manual masks.
 - Tasks:
-  - Add `manual_masking.py` with binarization, alignment check, overlay function.
+  - Add `overlay.py` with binarization, alignment check, overlay function.
 - Acceptance criteria:
   - Manual mask checks can run on one image or full dataset with same API.
 
 ### Issue 6: Add SAM wrapper class
 - Goal: Isolate model loading and mask generation state.
 - Tasks:
-  - Add `sam_segmenter.py` with `SamSegmenter` class.
-  - Include conversion utilities (`masks_to_binary`, area filtering).
+  - Add `sam_segmenter.py` with `SAMSegmenter` class.
 - Acceptance criteria:
   - SAM is initialized once and reused.
 
@@ -66,7 +65,7 @@ modular, and maintainable software product.
 ### Issue 8: Add evaluation module with metrics
 - Goal: Consolidate all evaluation metrics.
 - Tasks:
-  - Add `evaluation.py` with Dice, IoU, Precision, Recall, dataset evaluator.
+  - Add `evaluation.py` with Dice, IoU.
 - Acceptance criteria:
   - One canonical Dice implementation is used everywhere.
 
@@ -77,26 +76,17 @@ modular, and maintainable software product.
 - Acceptance criteria:
   - Notebook plots call helper functions instead of duplicating Matplotlib blocks.
 
-## Phase 3: Notebook Cleanup
 
-### Issue 10: Rewrite notebook to orchestration-only style
-- Goal: Keep notebook readable and focused on narrative/results.
-- Tasks:
-  - Keep markdown explanations.
-  - Replace long cells with short calls into modules.
-  - Remove duplicate imports and duplicate loops.
-- Acceptance criteria:
-  - Notebook cells are short and understandable.
-  - Logic is primarily in `.py` files.
-
-### Issue 11: Split monolithic notebook into 4 focused notebooks
+### Issue 11: Split monolithic notebook into 6 focused notebooks
 - Goal: Improve clarity and debugging.
 - Tasks:
   - Create:
-    - `01_data_and_preprocessing.ipynb`
-    - `02_manual_mask_validation.ipynb`
-    - `03_auto_segmentation_experiments.ipynb`
-    - `04_evaluation_and_report.ipynb`
+    - `testing_loader.ipynb`
+    - `test_preprocessing.ipynb`
+    - `test_sam.ipynb`
+    - `test_yolo.ipynb`
+    - `test_evaluation.ipynb`
+    -`test_overlay.ipynb`
 - Acceptance criteria:
   - Each notebook has one clear objective and can run independently.
 
@@ -128,30 +118,11 @@ modular, and maintainable software product.
 - Acceptance criteria:
   - New collaborator can run project with documented steps.
 
-## Phase 5: Productization and UI (Lower Priority)
 
-### Issue 15: Add simple user interface for pasted screenshots
-- Goal: Let users paste screenshots and run segmentation/count quickly.
+### Update README and documentation 
+- Goal: Provide clear project overview and usage instructions.
 - Tasks:
-  - Maintain `app.py` Streamlit app.
-  - Support paste/upload input.
-  - Show segmented overlay, binary mask, and vehicle count.
+  - Update README with project description, architecture, and usage.
+  - Add contribution guidelines and link to `CONTRIBUTING.md`.
 - Acceptance criteria:
-  - User can paste image and get result in one click.
-
-### Issue 16: Connect UI to refactored pipeline modules
-- Goal: Ensure UI reuses production logic and not notebook code.
-- Tasks:
-  - Route UI inference through `src/segmentation_project` modules.
-  - Keep model configuration externalized in config.
-- Acceptance criteria:
-  - UI and notebook share the same core code path.
-
-### Issue 17: Improve UI for reliability and reporting
-- Goal: Make interface useful for demonstrations and future handoff.
-- Tasks:
-  - Add better error handling for invalid files/model paths.
-  - Add per-class counts and confidence controls.
-  - Add export of results (mask, annotated image, JSON metadata).
-- Acceptance criteria:
-  - UI handles failures gracefully and provides reproducible outputs.
+  - README provides a clear entry point for new users and contributors.

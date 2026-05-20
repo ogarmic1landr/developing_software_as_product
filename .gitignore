@@ -8,9 +8,15 @@ runs/
 
 /CLAUDE.md
 /py_tut.md
+dist/
+build/
 *.egg-info/
 *.pt
 *_output.png
 .DS_Store
 *.pth
 *.profgi
+pipeline/
+runs/
+scripts/
+profile_output.prof
