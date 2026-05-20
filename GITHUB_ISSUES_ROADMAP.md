@@ -119,7 +119,7 @@ modular, and maintainable software product.
   - New collaborator can run project with documented steps.
 
 
-### Update README and documentation 
+### Update README and documentation
 - Goal: Provide clear project overview and usage instructions.
 - Tasks:
   - Update README with project description, architecture, and usage.

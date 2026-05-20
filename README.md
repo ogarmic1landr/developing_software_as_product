@@ -54,7 +54,7 @@ The screenshot below illustrates an example of the original implementation, wher
 
 ## Limitations of the Original Notebook
 
-- Existed a single Jupyter notebook without a GitHub repository 
+- Existed a single Jupyter notebook without a GitHub repository
 - Monolithic notebook structure with no clear modular separation
 - Limited reusability and scalability
 - Hardcoded file paths
@@ -254,7 +254,7 @@ developing_software_as_product/
 │
 ├── masks_auto/
 │
-├── masks_manual/      
+├── masks_manual/
 │
 ├── src/
 │   └── segmentation_project/
