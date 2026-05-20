@@ -8,7 +8,7 @@
 ![Status](https://img.shields.io/badge/status-active-success)
 ![Architecture](https://img.shields.io/badge/architecture-modularized-purple)
 ![Models](https://img.shields.io/badge/models-SAM%20%7C%20YOLOv8-orange)
-![Framework](https://img.shields.io/badge/UI-Streamlit-red)
+
 
 
 ## Project Title
@@ -36,13 +36,38 @@ May 2026
 
 ## Project Aim
 The goal of this project is to transition an existing vehicle segmentation Jupyter notebook from an academic research project into a maintainable and collaboratively developed software product.
-This transformation involves code refactoring, modularization, improved documentation, performance optimization, and the introduction of version control and structured collaboration workflows using GitHub.
+This transformation involves code refactoring, modularization, improved documentation, possible performance optimization, and the introduction of version control and structured collaboration workflows using GitHub.
+
+## State at the start
+
+The original project was developed as a single Jupyter notebook containing all code for data loading, preprocessing, segmentation, and visualization. The notebook was designed for experimentation and research purposes, with hardcoded paths making it difficult to run in another machine, lacked testing and several duplicated logic across different sections.
+
+[Original Notebook](https://github.com/ogarmic1landr/developing_software_as_product/blob/main/notebook.ipynb)
+
+While suitable for experimentation, the monolithic structure limits reusability, scalability, and maintainability. To address this, the project is being refactored into a modular Python based codebase.
+
+The screenshot below illustrates an example of the original implementation, where image loading is performed using hardcoded (image_folder = "images") file paths within the notebook.
+
+
+![Initial notebook structure](assets/screenshots/Screenshot%20(1192).png)
+
+
+## Limitations of the Original Notebook
+
+- Existed a single Jupyter notebook without a GitHub repository
+- Monolithic notebook structure with no clear modular separation
+- Limited reusability and scalability
+- Hardcoded file paths
+- Lack of testing and validation for individual components
+- Duplication of logic across different sections of the notebook
+- Designed for experimentation rather than maintainable software development
 
 
 ## Project Objectives
+
 - Refactor and modularize the existing code
 
-- Improve runtime performance and scalability
+- Consider runtime performance optimizations for the codebase
 
 - Enhance documentation and code readability
 
@@ -53,49 +78,26 @@ This transformation involves code refactoring, modularization, improved document
 - Apply best practices in software product engineering
 
 
-## Optional UI Demo (Paste Screenshot -> Segment + Count)
-This repository now includes a lightweight Streamlit UI for quick testing on screenshots
-(including Google Maps screenshots pasted into the uploader).
 
-### What it does
-- Loads an uploaded or pasted image
-- Runs YOLOv8 segmentation/detection
-- Highlights detected vehicle regions
-- Counts vehicles (car, bus, truck classes)
+## Refactoring Plan
 
-### Run
-1. Install required runtime packages (if missing in your environment):
-	- `pip install -r requirements-ui.txt`
-2. Start the app from project root:
-	- `streamlit run app.py`
-3. In the browser UI, paste or upload a screenshot and click **Run segmentation**.
+To improve the structure of the project, the notebook will be decomposed into modular Python components:
+
+- Image data loading module → Handles image paths and loading
+- Image Preprocessing module → Handles image resizing, gray-scaling, and other transformations
+- Segmentation module → Runs YOLO/SAM models
+- Visualization module → Handles plotting and output display
+
+These modules will be saved as separate .py files, allowing them to be imported into other scripts or components of the project. This enables code reuse across the pipeline and supports a more scalable and maintainable software design.
 
 
 ## Planned Refactor Tracking
+
 Use the issue roadmap in:
-- `GITHUB_ISSUES_ROADMAP.md`
+[GitHub Issues Roadmap](https://github.com/ogarmic1landr/developing_software_as_product/blob/main/GITHUB_ISSUES_ROADMAP.md)
 
 It provides a chronological GitHub issue sequence to refactor the notebook into a modular,
 clean, and maintainable software product.
-
-
-## Technologies and Tools
-- Python
-
-- Jupyter Notebook
-
-- OpenCV
-
-- Numpy
-
-- Matplotlib
-
-- Meta segment anything
-
-- YOLOv8m segmentation model
-
-- Git and GitHub
-
 
 ## Recommended Development Environment
 
@@ -104,24 +106,34 @@ The project has been tested and developed using the following IDEs:
 - Visual Studio Code (VS Code)
 - PyCharm
 
+but can still run in any Python environment with the required dependencies installed.
+
+### Core Dependencies
+
+- Python
+- Jupyter Notebook
+- OpenCV
+- NumPy
+- Matplotlib
+- Meta Segment Anything Model (SAM)
+- YOLOv8 Segmentation
+- Git and GitHub
+
+## Repository Setup
+
+### Clone the Repository
+
+Clone the repository using Git:
+
+
+```bash
+git clone https://github.com/ogarmic1landr/developing_software_as_product.git
+```
+
 
 ## Environment Setup
 
 This project supports both Conda-based environments and standard Python virtual environments.
-
-The Conda environment configuration file can be found here:
-
-* `environment.yml`
-  https://github.com/ogarmic1landr/developing_software_as_product/blob/main/environment.yml
-
-  The Python environment can also be set up using
-* `requirements.txt`
-  https://github.com/ogarmic1landr/developing_software_as_product/blob/main/requirements.txt
----
-
-### Option 1: Using Conda (Recommended)
-
-This option is recommended for contributors working with machine learning or scientific Python environments, as it ensures package compatibility and reproducibility across systems.
 
 #### Step 1 — Install Conda
 
@@ -129,6 +141,19 @@ Install either:
 
 * Miniconda
 * or Anaconda
+
+The Conda environment configuration file can be found here:
+
+* [`environment.yml`](https://github.com/ogarmic1landr/developing_software_as_product/blob/main/environment.yml)
+
+  The Python environment can also be set up using
+* [`requirements.txt`](https://github.com/ogarmic1landr/developing_software_as_product/blob/main/requirements.txt)
+---
+
+### Option 1: Using Conda (Recommended)
+
+This option is recommended for contributors working with machine learning or scientific Python environments, as it ensures package compatibility and reproducibility across systems.
+
 
 #### Step 2 — Create the environment
 
@@ -190,17 +215,6 @@ This installs all runtime dependencies required for the project.
 
 ---
 
-## Running the Application
-
-After the environment has been activated and dependencies installed, run the Streamlit application from the project root:
-
-```bash
-streamlit run app.py
-```
-
-The application will open in your default browser and allow image upload and vehicle segmentation testing.
-
-
 ## Debugging and Running the Project
 
 The project can also be executed and debugged directly from the IDE using the configured Python interpreter or Conda environment.
@@ -212,30 +226,6 @@ All changes must be made in feature branches
 Pull Requests are required before merging
 
 Minimum of 1 approvals from collaborators required
-
-
-## Current codebase
-This project was initially a Jupyter notebook for vehicle image segmentation. The notebook contains all core logic within a single file, including data loading, Image preprocessing steps, Testing several Image segmentation models, and visualization.
-
-While suitable for experimentation, the monolithic structure limits reusability, scalability, and maintainability. To address this, the project is being refactored into a modular Python based codebase.
-
-The screenshot below illustrates an example of the original implementation, where image loading is performed using hardcoded (image_folder = "images") file paths within the notebook.
-
-
-![Initial notebook structure](assets/screenshots/Screenshot%20(1192).png)
-
-
-## Refactoring Plan
-
-To improve the structure of the project, the notebook will be decomposed into modular Python components:
-
-- Image data loading module → Handles image paths and loading
-- Image Preprocessing module → Handles image resizing, gray-scaling, and other transformations
-- Segmentation module → Runs YOLO/SAM models
-- Visualization module → Handles plotting and output display
-
-These modules will be saved as separate .py files, allowing them to be imported into other scripts or components of the project. This enables code reuse across the pipeline and supports a more scalable and maintainable software design.
-
 
 
 ## Refactored Repository Structure
@@ -258,16 +248,13 @@ developing_software_as_product/
 ├── assets/
 │   └── screenshots/
 │
+├── docs/
+|
 ├── images/
 │
 ├── masks_auto/
 │
 ├── masks_manual/
-│
-├── pipeline/
-│       └── app.py/
-│
-├── runs/
 │
 ├── src/
 │   └── segmentation_project/
@@ -288,24 +275,25 @@ developing_software_as_product/
 │       │   ├── sam_segmenter.py
 │       │   ├── yolo_segmenter.py
 │       │   ├── test_sam.ipynb
-│       │   └── test.yolo.ipynb
+│       │   └── test_yolo.ipynb
 │       │
 │       └── model_evaluation/
 │           ├── evaluation.py
 │           └── test_evaluation.ipynb
 │
 ├── .github/
-│
+|── tests/
 ├── .gitignore
 ├── .pre-commit-config.yaml
+├── CONTRIBUTING.md
 ├── environment.yml
-├── requirements.txt
+├── GITHUB_ISSUES_ROADMAP.md
+├── LICENSE
+├── notebook.ipynb
 ├── pyproject.toml
 ├── README.md
-├── LICENSE
-└── GITHUB_ISSUES_ROADMAP.md
+└── requirements.txt
 ```
-
 
 
 ## Running the segmentation experiments pipeline.
@@ -424,17 +412,38 @@ The ground truth masks are used during evaluation to compute:
 This allows quantitative comparison between the predicted segmentation masks and the manually annotated vehicle regions.
 
 
-## Limitations of the Original Notebook
+## Development Tooling
 
-The original vehicle segmentation project was developed as a research-oriented Jupyter notebook.
+The repository includes additional software engineering tooling to support maintainability and collaborative development, including:
 
-While functional, it has several limitations when viewed as a software product this include:
+- GitHub Actions CI/CD workflows
+- Ruff linting and formatting
+- Pre-commit hooks
+- Git-based collaborative workflows
 
-- Monolithic notebook structure with no clear modular separation
-- Limited reusability and scalability
-- Hard coded parameters and file paths
-- Minimal documentation
-- Designed for experimentation rather than maintainable software development
+
+## Contribution Guidelines
+
+Please review the repository contribution rules before opening Pull Requests:
+
+`CONTRIBUTING.md`
+
+
+## Future Work and Improvements
+
+Several future improvements could further extend the project beyond the current notebook refactoring and modularizing into a software product supported by collaborative GitHub workflows
+
+### Streamlit User Interface
+
+A lightweight Streamlit interface was explored during development as a potential frontend layer for interactive segmentation testing and visualization.
+
+Future work could expand this interface into a more complete application supporting:
+- interactive image upload,
+- live segmentation visualization,
+- evaluation metric dashboards,
+- and deployment-ready workflows.
+
+
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
